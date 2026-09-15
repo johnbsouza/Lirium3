@@ -1,5 +1,6 @@
 import { User, LogOut, Settings, CreditCard, ChevronRight } from "lucide-react";
 import { Link } from "react-router";
+import "./components.css";
 
 export function ClientProfile() {
   return (
@@ -19,7 +20,7 @@ export function ClientProfile() {
         <p className="text-sm text-muted-foreground">mariana.costa@email.com</p>
         <p className="text-sm text-muted-foreground mt-1">(11) 98765-4321</p>
         
-        <button className="mt-4 px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full hover:bg-primary hover:text-primary-foreground transition-colors">
+        <button className="btn-edit-profile">
           Editar Perfil
         </button>
       </div>
@@ -27,7 +28,7 @@ export function ClientProfile() {
       <div className="space-y-3">
         <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">Configurações</h3>
         
-        <Link to="#" className="flex items-center justify-between bg-card border border-border p-4 rounded-xl shadow-sm">
+        <Link to="#" className="settings-link">
           <div className="flex items-center gap-3">
             <User className="w-5 h-5 text-primary" />
             <span className="font-medium text-foreground">Dados Pessoais</span>
@@ -35,7 +36,7 @@ export function ClientProfile() {
           <ChevronRight className="w-4 h-4 text-muted-foreground" />
         </Link>
 
-        <Link to="#" className="flex items-center justify-between bg-card border border-border p-4 rounded-xl shadow-sm">
+        <Link to="#" className="settings-link">
           <div className="flex items-center gap-3">
             <CreditCard className="w-5 h-5 text-primary" />
             <span className="font-medium text-foreground">Formas de Pagamento</span>
@@ -43,7 +44,7 @@ export function ClientProfile() {
           <ChevronRight className="w-4 h-4 text-muted-foreground" />
         </Link>
 
-        <Link to="#" className="flex items-center justify-between bg-card border border-border p-4 rounded-xl shadow-sm">
+        <Link to="#" className="settings-link">
           <div className="flex items-center gap-3">
             <Settings className="w-5 h-5 text-primary" />
             <span className="font-medium text-foreground">Preferências do App</span>

@@ -1,5 +1,6 @@
 import { Bell, Calendar as CalendarIcon } from "lucide-react";
 import { Link } from "react-router";
+import "./components.css";
 
 export function ClientHome() {
   return (
@@ -23,7 +24,7 @@ export function ClientHome() {
       <div className="mb-8">
         <Link 
           to="/client/services" 
-          className="flex items-center justify-center gap-3 w-full bg-primary text-primary-foreground font-semibold py-4 rounded-xl shadow-md hover:scale-[1.02] transition-transform"
+          className="flex items-center justify-center gap-3 w-full bg-primary text-primary-foreground font-semibold py-4 rounded-xl shadow-md hover-scale"
         >
           <CalendarIcon className="w-5 h-5" />
           Agendar Horário
@@ -46,7 +47,7 @@ export function ClientHome() {
                  <p className="text-xs text-muted-foreground">Nail Designer Sênior</p>
                </div>
             </div>
-            <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-semibold">
+            <span className="status-badge">
               Confirmado
             </span>
           </div>
@@ -67,7 +68,7 @@ export function ClientHome() {
               <p className="text-sm font-medium">Manicure + Esmaltação em Gel</p>
               <p className="text-xs text-muted-foreground">1h 15min</p>
             </div>
-            <button className="text-sm text-primary font-medium hover:underline">
+            <button className="text-sm text-primary font-medium hover-underline">
               Detalhes
             </button>
           </div>
@@ -82,7 +83,7 @@ export function ClientHome() {
             { name: "Spa dos Pés", price: "R$ 55", img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=200&h=200&fit=crop&auto=format" },
             { name: "Nail Art (por unha)", price: "R$ 15", img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=200&h=200&fit=crop&auto=format" }
           ].map((s, i) => (
-            <div key={i} className="min-w-[140px] bg-card border border-border rounded-xl overflow-hidden snap-start shrink-0 shadow-sm">
+             <div key={i} className="min-w-card bg-card border border-border rounded-xl overflow-hidden snap-start shrink-0 shadow-sm">
               <img src={s.img} alt={s.name} className="w-full h-24 object-cover" />
               <div className="p-3">
                 <p className="text-sm font-medium mb-1 truncate text-foreground">{s.name}</p>

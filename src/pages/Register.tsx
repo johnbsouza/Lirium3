@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import "./components.css";
 
 export function Register() {
   return (
@@ -13,34 +14,34 @@ export function Register() {
           <input 
             type="text" 
             placeholder="Nome completo" 
-            className="w-full bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+            className="input-field"
           />
         </div>
         <div className="space-y-2">
           <input 
             type="email" 
             placeholder="E-mail" 
-            className="w-full bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+            className="input-field"
           />
         </div>
         <div className="space-y-2">
           <input 
             type="tel" 
             placeholder="Celular" 
-            className="w-full bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+            className="input-field"
           />
         </div>
         <div className="space-y-2">
           <input 
             type="password" 
             placeholder="Senha" 
-            className="w-full bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+            className="input-field"
           />
         </div>
         
         <Link 
           to="/client" 
-          className="block w-full bg-primary text-primary-foreground text-center font-semibold py-3 rounded-lg mt-8 hover:bg-primary/90 transition-colors"
+          className="btn-primary"
         >
           Cadastrar
         </Link>

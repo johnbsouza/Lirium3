@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { ChevronLeft, Star } from "lucide-react";
+import "./components.css";
 
 export function ClientProfessionals() {
   const professionals = [
@@ -19,8 +20,8 @@ export function ClientProfessionals() {
 
       <div className="grid grid-cols-2 gap-4">
         {professionals.map(p => (
-          <Link key={p.id} to="/client/datetime" className="bg-card border border-border rounded-xl p-4 flex flex-col items-center text-center hover:border-primary/50 transition-colors shadow-sm">
-            <div className="w-20 h-20 rounded-full overflow-hidden mb-3 border-2 border-transparent hover:border-primary transition-all">
+          <Link key={p.id} to="/client/datetime" className="pro-card">
+            <div className="w-20 h-20 rounded-full overflow-hidden mb-3 border-2 border-transparent hover-border-primary-solid transition-all">
               <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
             </div>
             <h3 className="font-medium text-foreground text-sm mb-1">{p.name}</h3>
@@ -33,7 +34,7 @@ export function ClientProfessionals() {
           </Link>
         ))}
         
-        <Link to="/client/datetime" className="bg-background border border-dashed border-border rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-primary/50 transition-colors h-full min-h-[160px]">
+        <Link to="/client/datetime" className="any-pro-card">
           <div className="w-12 h-12 rounded-full bg-card shadow-sm flex items-center justify-center mb-3">
             <span className="text-xl">🤔</span>
           </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Search, SlidersHorizontal } from "lucide-react";
+import "./components.css";
 
 export function ClientServices() {
   const categories = ["Todos", "Mãos", "Pés", "Alongamento", "Spa", "Nail Art"];
@@ -24,7 +25,7 @@ export function ClientServices() {
           <input 
             type="text" 
             placeholder="Buscar serviços..." 
-            className="w-full bg-card border border-border rounded-lg pl-10 pr-4 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary shadow-sm"
+            className="input-search"
           />
         </div>
         <button className="bg-card border border-border p-2 rounded-lg text-primary shadow-sm">
@@ -45,7 +46,7 @@ export function ClientServices() {
 
       <div className="space-y-4">
         {services.map(s => (
-          <div key={s.id} className="bg-card border border-border p-4 rounded-xl flex justify-between items-center shadow-sm hover:border-primary/30 transition-colors">
+          <div key={s.id} className="service-card">
             <div>
               <h3 className="font-medium text-foreground mb-1">{s.name}</h3>
               <p className="text-xs text-muted-foreground">{s.duration}</p>
@@ -54,7 +55,7 @@ export function ClientServices() {
               <span className="text-primary font-semibold block mb-2">{s.price}</span>
               <Link 
                 to="/client/professionals" 
-                className="bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="btn-schedule"
               >
                 Agendar
               </Link>

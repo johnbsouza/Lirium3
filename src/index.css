@@ -23,8 +23,8 @@
 
 @layer base {
   :root {
-    --background: #FAF7F5;
-    --foreground: #2D2424;
+    --background: #d1d1d18a;
+    --foreground: #ffffff;
   }
 
   body {

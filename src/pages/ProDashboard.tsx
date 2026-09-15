@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { LogOut, Calendar, Clock, DollarSign, CheckCircle } from "lucide-react";
+import "./components.css";
 
 export function ProDashboard() {
   const appointments = [
@@ -28,14 +29,14 @@ export function ProDashboard() {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-background rounded-xl p-4 border border-border shadow-sm">
+          <div className="stat-card">
             <div className="flex items-center gap-2 text-muted-foreground mb-2">
               <DollarSign className="w-4 h-4 text-primary" />
               <span className="text-xs">Comissão Hoje</span>
             </div>
             <p className="text-xl font-semibold text-foreground">R$ 145,00</p>
           </div>
-          <div className="bg-background rounded-xl p-4 border border-border shadow-sm">
+          <div className="stat-card">
             <div className="flex items-center gap-2 text-muted-foreground mb-2">
               <Calendar className="w-4 h-4 text-primary" />
               <span className="text-xs">Atendimentos</span>
@@ -54,7 +55,7 @@ export function ProDashboard() {
         <div className="relative border-l-2 border-border ml-4 space-y-8 pb-4">
           {appointments.map((apt, i) => (
             <div key={i} className="relative pl-6">
-              <div className={`absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 bg-background ${apt.status === 'completed' ? 'border-green-400' : apt.status === 'next' ? 'border-primary shadow-[0_0_10px_rgba(200,142,167,0.4)]' : 'border-border'}`}></div>
+              <div className={`absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 bg-background ${apt.status === 'completed' ? 'border-green-400' : apt.status === 'next' ? 'border-primary shadow-glow' : 'border-border'}`}></div>
               
               <div className={`bg-card border rounded-xl p-4 shadow-sm ${apt.status === 'next' ? 'border-primary' : 'border-border'}`}>
                 <div className="flex justify-between items-start mb-2">

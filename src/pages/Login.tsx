@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import logo from "../imports/shared image.png";
+import "./components.css";
 
 export function Login() {
   return (
@@ -17,20 +18,20 @@ export function Login() {
           <input 
             type="email" 
             placeholder="E-mail" 
-            className="w-full bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm"
+            className="input-field"
           />
         </div>
         <div className="space-y-2">
           <input 
             type="password" 
             placeholder="Senha" 
-            className="w-full bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm"
+            className="input-field"
           />
         </div>
         
         <Link 
           to="/client" 
-          className="block w-full bg-primary text-primary-foreground font-semibold py-3 rounded-lg mt-6 hover:bg-primary/90 transition-colors shadow-md"
+          className="btn-primary"
         >
           Entrar
         </Link>

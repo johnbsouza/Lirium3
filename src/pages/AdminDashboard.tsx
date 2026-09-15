@@ -11,12 +11,12 @@ export function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-background text-foreground max-w-md mx-auto shadow-2xl pb-10">
-      <header className="bg-card px-6 py-6 border-b border-border flex justify-between items-center shadow-sm">
-        <div>
-          <h2 className="text-xl font-serif text-foreground">Painel Admin</h2>
+      <header className="bg-card px-6 py-6 border-b border-border flex justify-center items-center shadow-sm relative">
+        <div className="text-center">
+          <h1 className="text-xl font-serif text-foreground">Administrador</h1>
           <p className="text-sm text-primary">Lirium Esmalteria</p>
         </div>
-        <Link to="/" className="text-muted-foreground hover:text-foreground p-2">
+        <Link to="/" className="text-muted-foreground hover:text-foreground p-2 absolute right-6">
           <LogOut className="w-5 h-5" />
         </Link>
       </header>

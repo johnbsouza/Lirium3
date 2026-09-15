@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import "./components.css";
 
 export function ClientDateTime() {
   const days = [
@@ -39,7 +40,7 @@ export function ClientDateTime() {
           {days.map((d, i) => (
             <div 
               key={i} 
-              className={`flex flex-col items-center p-3 rounded-xl border cursor-pointer transition-colors ${d.active ? 'bg-primary border-primary text-primary-foreground' : 'bg-card border-border text-muted-foreground hover:border-primary/50'}`}
+              className={`flex flex-col items-center p-3 rounded-xl border cursor-pointer transition-colors ${d.active ? 'bg-primary border-primary text-primary-foreground' : 'bg-card border-border text-muted-foreground hover-border-primary'}`}
             >
               <span className="text-xs mb-1">{d.day}</span>
               <span className={`text-lg font-semibold ${d.active ? 'text-primary-foreground' : 'text-foreground'}`}>{d.date}</span>
@@ -54,7 +55,7 @@ export function ClientDateTime() {
           {times.map((t, i) => (
             <button 
               key={i}
-              className={`py-3 rounded-lg border text-sm font-medium transition-colors ${t === "14:30" ? 'bg-primary border-primary text-primary-foreground' : 'bg-card border-border text-foreground hover:border-primary/50'}`}
+              className={`py-3 rounded-lg border text-sm font-medium transition-colors ${t === "14:30" ? 'bg-primary border-primary text-primary-foreground' : 'bg-card border-border text-foreground hover-border-primary'}`}
             >
               {t}
             </button>
@@ -65,7 +66,7 @@ export function ClientDateTime() {
       <div className="mt-10">
         <Link 
           to="/client/checkout" 
-          className="block w-full bg-primary text-primary-foreground text-center font-semibold py-4 rounded-xl shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:scale-[1.02] transition-transform"
+          className="block w-full bg-primary text-primary-foreground text-center font-semibold py-4 rounded-xl btn-shadow hover-scale"
         >
           Continuar
         </Link>

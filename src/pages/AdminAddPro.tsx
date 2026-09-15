@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { ChevronLeft, Camera, Upload } from "lucide-react";
 import { useState } from "react";
+import "./components.css";
 
 export function AdminAddPro() {
   const [saved, setSaved] = useState(false);
@@ -13,7 +14,7 @@ export function AdminAddPro() {
         </div>
         <h2 className="text-2xl font-serif text-foreground mb-2">Profissional Adicionado!</h2>
         <p className="text-muted-foreground mb-8">O novo membro da equipe foi cadastrado com sucesso e já está disponível para agendamentos.</p>
-        <Link to="/admin" className="w-full bg-primary text-primary-foreground font-semibold py-3 rounded-lg shadow-md hover:bg-primary/90 transition-colors block">
+        <Link to="/admin" className="w-full bg-primary text-primary-foreground font-semibold py-3 rounded-lg shadow-md hover-bg-primary-90 transition-colors block">
           Voltar ao Painel
         </Link>
       </div>
@@ -33,7 +34,7 @@ export function AdminAddPro() {
         <div className="flex flex-col items-center mb-8">
           <div className="w-24 h-24 rounded-full bg-muted border border-border border-dashed flex items-center justify-center mb-3 relative overflow-hidden group cursor-pointer">
             <Camera className="w-6 h-6 text-muted-foreground" />
-            <div className="absolute inset-0 bg-black/40 hidden group-hover:flex items-center justify-center transition-colors">
+            <div className="absolute inset-0 bg-black/40 hidden group-hover-flex items-center justify-center transition-colors">
               <Upload className="w-6 h-6 text-white" />
             </div>
           </div>
@@ -43,30 +44,30 @@ export function AdminAddPro() {
         <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setSaved(true); }}>
           <div className="space-y-1">
             <label className="text-xs font-medium text-foreground ml-1">Nome Completo</label>
-            <input type="text" placeholder="Ex: Júlia Silva" className="w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" required />
+            <input type="text" placeholder="Ex: Júlia Silva" className="input-field-sm" required />
           </div>
           
           <div className="space-y-1">
             <label className="text-xs font-medium text-foreground ml-1">Especialidade / Cargo</label>
-            <input type="text" placeholder="Ex: Nail Designer Sênior" className="w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" required />
+            <input type="text" placeholder="Ex: Nail Designer Sênior" className="input-field-sm" required />
           </div>
 
           <div className="space-y-1">
             <label className="text-xs font-medium text-foreground ml-1">Comissão Padrão (%)</label>
-            <input type="number" placeholder="Ex: 40" className="w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" required />
+            <input type="number" placeholder="Ex: 40" className="input-field-sm" required />
           </div>
 
           <div className="space-y-1">
             <label className="text-xs font-medium text-foreground ml-1">E-mail (Acesso ao App)</label>
-            <input type="email" placeholder="email@exemplo.com" className="w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" required />
+            <input type="email" placeholder="email@exemplo.com" className="input-field-sm" required />
           </div>
           
           <div className="space-y-1">
             <label className="text-xs font-medium text-foreground ml-1">Telefone</label>
-            <input type="tel" placeholder="(00) 00000-0000" className="w-full bg-card border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" required />
+            <input type="tel" placeholder="(00) 00000-0000" className="input-field-sm" required />
           </div>
 
-          <button type="submit" className="w-full bg-primary text-primary-foreground font-semibold py-4 rounded-xl shadow-md hover:scale-[1.02] transition-transform mt-8">
+          <button type="submit" className="w-full bg-primary text-primary-foreground font-semibold py-4 rounded-xl shadow-md hover-scale mt-8">
             Salvar Profissional
           </button>
         </form>

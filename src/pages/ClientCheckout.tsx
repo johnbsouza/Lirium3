@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { ChevronLeft, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import "./components.css";
 
 export function ClientCheckout() {
   const [confirmed, setConfirmed] = useState(false);
@@ -27,7 +28,7 @@ export function ClientCheckout() {
 
         <Link 
           to="/client" 
-          className="w-full max-w-sm bg-primary text-primary-foreground font-semibold py-4 rounded-xl shadow-md hover:scale-[1.02] transition-transform block"
+          className="w-full max-w-sm bg-primary text-primary-foreground font-semibold py-4 rounded-xl shadow-md hover-scale block"
         >
           Voltar ao Início
         </Link>
@@ -73,7 +74,7 @@ export function ClientCheckout() {
         <h3 className="text-lg font-serif mb-4 text-foreground">Forma de Pagamento</h3>
         <div className="space-y-3">
           {["Cartão de Crédito", "PIX", "Pagar no Local"].map((method, i) => (
-            <label key={i} className={`flex items-center justify-between p-4 rounded-xl border cursor-pointer transition-colors shadow-sm ${i === 1 ? 'border-primary bg-primary/5' : 'border-border bg-card'}`}>
+            <label key={i} className={`flex items-center justify-between p-4 rounded-xl border cursor-pointer transition-colors shadow-sm ${i === 1 ? 'border-primary bg-primary-light' : 'border-border bg-card'}`}>
               <span className="font-medium text-sm text-foreground">{method}</span>
               <input type="radio" name="payment" className="w-4 h-4 accent-primary" defaultChecked={i === 1} />
             </label>
@@ -83,7 +84,7 @@ export function ClientCheckout() {
 
       <button 
         onClick={() => setConfirmed(true)}
-        className="block w-full bg-primary text-primary-foreground text-center font-semibold py-4 rounded-xl shadow-md hover:scale-[1.02] transition-transform"
+        className="block w-full bg-primary text-primary-foreground text-center font-semibold py-4 rounded-xl shadow-md hover-scale"
       >
         Confirmar Agendamento
       </button>
